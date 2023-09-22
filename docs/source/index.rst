@@ -1,22 +1,8 @@
-Welcome to Lumache's documentation!
+Laboratorio de Sistemas Embebidos de IMPA TRQ
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Buscamos recopilar toda la informacion, ejemplos y guias que desarrollemos para que quienes nos visiten tengan una mejor experiencia trabajando con sistemas embebidos.
 
 .. note::
 
-   This project is under active development.
-
-Contents
---------
-
-.. toctree::
-
-   usage
-   api
+   Este proyecto esta bajo constante desarrollo.
