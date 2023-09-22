@@ -11,11 +11,12 @@ Buscamos recopilar toda la informacion, ejemplos y guias que desarrollemos para 
 Nuestros microcontroladores
 ===========================
 
-=======================
-|Raspberry Pi Pico|_
------------------------
-`Raspberry Pi Pico`_
-=======================
++-----------------------+
+| |Raspberry Pi Pico|_  |
++=======================+
+| `Raspberry Pi Pico`_  |
++-----------------------+
 
-.. |Raspberry Pi Pico|_ image:: ../_static/raspberry-pi-pico.png
+.. |Raspberry Pi Pico| image:: ../_static/raspberry-pi-pico.png 
+   :height: 100
 .. _Raspberry Pi Pico: /microcontroladores/raspberry-pi-pico/index.html
