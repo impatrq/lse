@@ -40,6 +40,14 @@ Esto va a hacer que el comando ``mingw32-make`` sea asociado con el comando mas 
 GNU Arm Embedded Toolchain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Lo siguiente es conseguir un compilador de Arm para generar codigo que pueda ser interpretado por el RP2040. Para eso vamos a la pagina de descargas de Arm_ y buscamos la ultima version disponible de ``gcc-arm-none-eabi`` en su version ejecutable. La descargamos y luego la instalamos normalmente.
+
+.. _Arm: https://developer.arm.com/downloads/-/gnu-rm
+
+.. note::
+
+    En el proceso de instalacion, hacer click en las opciones *Launch gccvar.bar*, *Add path to environment variable* y *Add registry information*.
+
 CMake
 ~~~~~
 
