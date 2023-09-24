@@ -29,7 +29,7 @@ En esta documentacion van a encontrarse con lo siguinte:
     - `PlatformIO`_
     - `Wokwi`_
 
-.. _Programacion en lenguaje C/C++: ./raspberry-pi-pico-c-c++/index.html
-.. _Visual Studio Code: ./raspberry-pi-pico-c-c++/vscode/index.html
-.. _PlatformIO: ./raspberry-pi-pico-c-c++/platformio/index.html
-.. _Wokwi: ./raspberry-pi-pico-c-c++/wokwi/index.html
+.. _Programacion en lenguaje C/C++: c-c++/index.html
+.. _Visual Studio Code: c-c++/vscode/index.html
+.. _PlatformIO: c-c++/platformio/index.html
+.. _Wokwi: c-c++/wokwi/index.html
