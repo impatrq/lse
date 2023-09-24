@@ -65,8 +65,34 @@ El SDK de la Pico hace uso de Python para automatizar algunas tareas por lo que 
 Git
 ~~~
 
+Como ultima herramienta, necesitamos Git que nos dara control de versiones sobre nuestros proyectos. Descargamos de la pagina de Git_ y luego instalamos normalmente con todas las opciones por defecto.
+
+.. _Git: https://git-scm.com/downloads
+
 Pico SDK
 ~~~~~~~~
 
-Pico Project Generator
-~~~~~~~~~~~~~~~~~~~~~~
+Ya con todas las herramientas instaladas, podemos descargar el SDK de la Raspberry Pi Pico que no es mas que un conjunto de software que nos va a facilitar programar los perifericos del RP2040. Para ello, abrimos una consola de comandos de Windows, noten que se abre en la ruta ``C:\Usuarios\USUARIO``. Luego, escribimos:
+
+.. code::
+
+    git clone -b master https://github.com/raspberrypi/pico-sdk.git
+    cd pico-sdk 
+    git submodule update --init
+
+Como ultimo paso para poder usar el SDK, tenemos que setear la variable de entorno ``PICO_SDK_PATH`` en nuestro sistema para que apunte a ``C:\Usuarios\USUARIO\pico-sdk``.
+
+.. note::
+    El directorio ``USUARIO`` en el comando debe corresponder con el nombre de usuario de la computadora.
+
+Pico Project Generator (opcional)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Con todo esto listo, podemos hacer un ultimo paso que es descargar un creador de proyectos para facilitarnos el inicializar uno cada vez que necesitemos programar la Raspberry Pi Pico. Para eso, abrimos la consola de comandos y escribimos:
+
+.. code::
+
+    git clone https://github.com/raspberrypi/pico-project-generator.git
+    echo python C:\Usuarios\USUARIO\pico-project-generator\pico_project.py --gui >> C:\Usuarios\USUARIO\pico-project-generator\run.cmd
+
+Esto nos va a crear un directorio llamado ``pico-project-generator` con un archivo llamado ``run.cmd`` dentro. Al ejecutarlo, va a abrirse una ventana que nos va a permitir configurar un nuevo proyecto para la Raspberry Pi Pico sin dificultades.
