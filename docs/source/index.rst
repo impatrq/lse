@@ -19,4 +19,4 @@ Nuestros microcontroladores
 
 .. |Raspberry Pi Pico| image:: ../_static/raspberry-pi-pico.png 
    :height: 100
-.. _Raspberry Pi Pico: /raspberry-pi-pico/index.html
+.. _Raspberry Pi Pico: raspberry-pi-pico/index.html
