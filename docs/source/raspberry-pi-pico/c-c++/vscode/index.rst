@@ -51,8 +51,16 @@ Lo siguiente es conseguir un compilador de Arm para generar codigo que pueda ser
 CMake
 ~~~~~
 
+La siguiente herramienta es la que se encarga de automatizar el proceso de compilacion. Vamos a la pagina de descarga de CMake_ y buscamos el instalador de la version mas reciente. Luego descargamos e instalamos tildando la opcion de agregar CMake al PATH.
+
+.. _CMake: https://cmake.org/download/
+
 Python
 ~~~~~~
+
+El SDK de la Pico hace uso de Python para automatizar algunas tareas por lo que va a ser necesario que tengamos Python instalado. Vamos a la pagina de descargas de Python_ y descargamos la version mas reciente, luego instalamos, tildando la opcion de agregar al PATH.
+
+.. _Python: https://www.python.org/downloads/
 
 Git
 ~~~
