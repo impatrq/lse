@@ -88,4 +88,4 @@ Con todo esto listo, podemos hacer un ultimo paso que es descargar un creador de
     git clone https://github.com/raspberrypi/pico-project-generator.git
     echo python C:\Usuarios\USUARIO\pico-project-generator\pico_project.py --gui >> C:\Usuarios\USUARIO\pico-project-generator\run.cmd
 
-Esto nos va a crear un directorio llamado ``pico-project-generator` con un archivo llamado ``run.cmd`` dentro. Al ejecutarlo, va a abrirse una ventana que nos va a permitir configurar un nuevo proyecto para la Raspberry Pi Pico sin dificultades.
+Esto nos va a crear un directorio llamado ``pico-project-generator`` con un archivo llamado ``run.cmd`` dentro. Al ejecutarlo, va a abrirse una ventana que nos va a permitir configurar un nuevo proyecto para la Raspberry Pi Pico sin dificultades.
