@@ -30,6 +30,6 @@ En esta documentacion van a encontrarse con lo siguinte:
     - `Wokwi`_
 
 .. _Programacion en lenguaje C/C++: c-c++/index.html
-.. _Visual Studio Code: c-c++/vscode/index.html
-.. _PlatformIO: c-c++/platformio/index.html
-.. _Wokwi: c-c++/wokwi/index.html
+.. _Visual Studio Code: c-c++/vscode.html
+.. _PlatformIO: c-c++/platformio.html
+.. _Wokwi: c-c++/wokwi.html
