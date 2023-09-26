@@ -10,6 +10,6 @@ Particularmente en el caso de la Raspberry Pi Pico, esta placa de desarrollo dem
 - `PlatformIO`_
 - `Wokwi`_
 
-.. _Visual Studio Code: ./vscode/index.html
-.. _PlatformIO: .platformio/index.html
-.. _Wokwi: ./wokwi/index.html
+.. _Visual Studio Code: ./vscode.html
+.. _PlatformIO: .platformio.html
+.. _Wokwi: ./wokwi.html
