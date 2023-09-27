@@ -282,3 +282,23 @@ Finalmente, para probar que el sistema operativo funciona, podemos usar este cod
 
         while(1);
     }
+
+El LED lo veremos parpadear a una frecuencia de 1 Hz, en el caso del mensaje, necesitaremos algun programa que nos permita ver el mensaje que la Raspberry Pi Pico esta enviando por USB. 
+
+Para computadoras con Windows se debe usar algun programa como Teraterm_ y conectar al ``COM`` adecuado. 
+
+.. _Teraterm: https://ttssh2.osdn.jp/index.html.en
+
+Para sistemas operativos con Linux o MacOS se puede usar ``minicom`` con un comando como el siguiente:
+
+.. code::
+
+    sudo minicom -b 115200 -o -D /dev/PORT
+
+Donde ``PORT`` debe coincidir con el de cada sistema operativo. En Linux suele ser algo como ``/dev/ttyACM0`` mientras que en MacOS suele ser ``/dev/tty.usbmodem`` seguido de algun numero.
+
+Se puede verificar el puerto correcto en Linux y MacOS con el comando:
+
+.. code::
+
+    ls /dev/tty*
