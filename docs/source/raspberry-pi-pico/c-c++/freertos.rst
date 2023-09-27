@@ -48,7 +48,7 @@ Luego, vamos a ir a la pagina de FreeRTOS_ y descargar la ultima version. Una ve
       - *freertos/include*
 
     * - *FreeRTOS/Source/portable/MemMang*
-      - *heap_4.c*
+      - *heap_3.c*
       - *freertos*
 
 FreeRTOSConfig.h
