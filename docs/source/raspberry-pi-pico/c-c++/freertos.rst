@@ -204,3 +204,52 @@ Debido a que FreeRTOS tiene multiples archivos con codigo fuente y muchas depend
     # Add libraries (extra libraries should be included here)
     target_link_libraries(${PROJECT_NAME} pico_stdlib freertos)
     pico_add_extra_outputs(${PROJECT_NAME})
+
+Programa de ejemplo
+~~~~~~~~~~~~~~~~~~~
+
+Finalmente, para probar que el sistema operativo funciona, podemos usar este codigo de ejemplo en nuestro ``main.c``. Cada un segundo se va a ejecutar una tarea que imprime un mensaje por consola:
+
+.. code:: c
+
+    #include <stdio.h>
+    #include "pico/stdlib.h"
+
+    #include <FreeRTOS.h>
+    #include <task.h>
+
+    /**
+    * @brief Tarea que imprime un mensaje 
+    * por consola periodicamente
+    */
+    void task_hello(void *params) {
+
+        while(1) {
+            // Imprimo mensaje
+            puts("Hello world!");
+            // Bloqueo tarea por un segundo
+            vTaskDelay(1000 / portTICK_PERIOD_MS);
+        }
+    }
+
+    /**
+    * @brief Programa principal
+    */
+    int main(void) {
+        // Inicializacion de stdio
+        stdio_init_all();
+        // Creo tarea
+        xTaskCreate(
+            task_hello,
+            "Hello",
+            configMINIMAL_STACK_SIZE,
+            NULL,
+            tskIDLE_PRIORITY,
+            NULL
+        );
+
+        // Inicializo scheduler
+        vTaskStartScheduler();
+
+        while(1);
+    }
