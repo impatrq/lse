@@ -56,7 +56,7 @@ FreeRTOSConfig.h
 
 Cada microcontrolador que porte un sistema operativo en tiempo real debe tener un archivo de configuracion particular que describa ciertas implementaciones del sistema operativo. Para nuestro caso, vamos a tomar el siguiente ejemplo y copiarlo en un nuevo archivo llamado ``FreeRTOSConfig.h`` en el directorio *freertos/include* de nuestro proyecto.
 
-.. code:: C
+.. code:: c
 
     #ifndef FREERTOS_CONFIG_H
     #define FREERTOS_CONFIG_H
@@ -152,7 +152,7 @@ Debido a que FreeRTOS tiene multiples archivos con codigo fuente y muchas depend
 
 .. _nota: ./cmakelists.html
 
-.. code::
+.. code:: cmake
 
     # Set CMake minimum version
     cmake_minimum_required(VERSION 3.13)
@@ -233,18 +233,47 @@ Finalmente, para probar que el sistema operativo funciona, podemos usar este cod
     }
 
     /**
+    * @brief Tarea que hace un blink del
+    * LED de la Pico periodicamente
+    */
+    void task_blink(void *params) {
+
+        while(1) {
+            // Conmuto LED
+            gpio_put(25, !gpio_get(25));
+            // Bloqueo tarea por medio segundo
+            vTaskDelay(500 / portTICK_PERIOD_MS);
+        }
+    }
+
+    /**
     * @brief Programa principal
     */
     int main(void) {
         // Inicializacion de stdio
         stdio_init_all();
-        // Creo tarea
+
+        // Habilito GPIO como salida
+        gpio_init(25);
+        gpio_set_dir(25, true);
+
+        // Creo tareas 
+
         xTaskCreate(
             task_hello,
             "Hello",
             configMINIMAL_STACK_SIZE,
             NULL,
-            tskIDLE_PRIORITY,
+            tskIDLE_PRIORITY + 1UL,
+            NULL
+        );
+
+        xTaskCreate(
+            task_blink,
+            "Blink",
+            configMINIMAL_STACK_SIZE,
+            NULL,
+            tskIDLE_PRIORITY + 1UL,
             NULL
         );
 
