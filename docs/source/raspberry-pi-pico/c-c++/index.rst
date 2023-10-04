@@ -23,5 +23,5 @@ Una vez instaladas las herramientas, podemos trabajar con este microcontrolador.
 
 .. _CMakeLists.txt y como agregar librerias de terceros: ./cmakelists.html
 .. _FreeRTOS en la Raspberry Pi Pico: ./freertos.html
-.. _FreeRTOS con dual core simetrico: ./freertos-smp.rst
+.. _FreeRTOS con dual core simetrico: ./freertos-smp.html
 .. _Raspberry Pi Pico baremetal con CMSIS: ./cmsis.html

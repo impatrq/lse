@@ -6,7 +6,7 @@ En esta nota de aplicacion vamos a mostrar como usar un sistema operativo en tie
 
 Esta nota atiende a los proyectos donde se comience a desarrollar todo desde cero. Para proyectos que usen PlatformIO la estructura de directorios es distinta. Para los que esten familiarizados con esa extension, una version distinta de esta nota puede hallarse aqui_ en la que el kernel del sistema operativo se importa manualmente, permitiendo traerlo a PlatformIO.
 
-.. _aqui: ./freertos-v1.rst
+.. _aqui: ./freertos-v1.html
 
 Obtener el kernel de FreeRTOS
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
