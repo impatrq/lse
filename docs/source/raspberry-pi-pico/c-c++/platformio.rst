@@ -101,7 +101,7 @@ Para compilar el codigo, buscamos la opcion de *Build* dentro del menu de opcion
 Como debuggear
 ~~~~~~~~~~~~~~
 
-Una vez que tengamos el proyecto creado, vamos a ver un ``platformio.ini`` al que tendremos que hacerle un cambio para que se vea asi:
+En primer lugar, vamos a modificar el ``platformio.ini`` para que se vea asi:
 
 .. code::
 
@@ -113,3 +113,48 @@ Una vez que tengamos el proyecto creado, vamos a ver un ``platformio.ini`` al qu
 
 El unico cambio es el agregar instrucciones sobre el tipo de compilacion. Esto va a permitir que a la hora de debuggear, podamos ejecutar el programa instruccion por instruccion.
 
+Por otro lado, tenemos que modificar el `launch.json` para agregar una configuracion de debuggeo con la extension Cortex-Debug y OpenOCD.
+
+.. note::
+
+    OpenOCD puede instalarse con ```sudo apt install openocd``` para sistemas operativos con distribuciones de Debian / Ubuntu y ```brew install openocd``` para MacOS.
+
+    Para Windows se puede descargar un comprimido ya compilado desde este `link`_ con el cuidado de que debe ser agregado al path de Windows.
+
+.. _`link`: https://gnutoolchains.com/arm-eabi/openocd/
+
+El `launch.json` que vamos a modificar agregamos una configuracion adicional en el array de *configurations* para que se lance una instancia de debuggeo con el OpenOCD usando el binario *APPLICATION.elf*. Lo que agregamos es lo siguiente:
+
+.. code:: json
+
+    {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "cwd": "${workspaceRoot}",
+                "executable": ".pio/build/pico-dap/APPLICATION.elf",
+                "name": "Debug with OpenOCD",
+                "request": "launch",
+                "type": "cortex-debug",
+                "servertype": "openocd",
+                "configFiles": [
+                    "interface/cmsis-dap.cfg",
+                    "target/rp2040-core0.cfg"
+                ],
+                "openOCDLaunchCommands": [
+                    "transport select swd",
+                    "adapter speed 4000"
+                ],
+                "searchDir": [],
+                "runToEntryPoint": "main",
+                "showDevDebugOutput": "none"
+            },
+            ...
+        ]
+    }
+
+Como ultimo paso antes de debuggear, necesitamos cargarle un firmware a la Raspberry Pi Pico en la RAM para que pueda usar el segundo procesador como interfaz USB a CMSIS-DAP para debuggear el primer procesador. Para lograr eso, bajamos el firmware desde este repositorio_ en GitHub y lo grabamos como se explico en el paso anterior.
+
+.. _repositorio: https://github.com/majbthrd/pico-debug/releases/download/v10.05/pico-debug-gimmecache.uf2
+
+Por ultimo, una vez flasheado el firmware, podemos proceder a compilar el proyecto, ir a la interfaz de Visual Studio Code de *Run and Debug*, seleccionamos la configuracion que acabamos de crear que se va a llamar *Debug with OpenOCD* y la corremos.
