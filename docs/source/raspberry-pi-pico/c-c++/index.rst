@@ -11,7 +11,7 @@ Particularmente en el caso de la Raspberry Pi Pico, esta placa de desarrollo dem
 - `Wokwi`_
 
 .. _Visual Studio Code: ./vscode.html
-.. _PlatformIO: .platformio.html
+.. _PlatformIO: ./platformio.html
 .. _Wokwi: ./wokwi.html
 
 Una vez instaladas las herramientas, podemos trabajar con este microcontrolador. Abajo dejamos algunas otras notas de aplicacion sobre el uso de esta placa de desarrollo.
