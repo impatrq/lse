@@ -8,9 +8,7 @@ Esta guia ofrece instrucciones para hacer algunas modificaciones en PlatformIO p
 
 .. note::
 
-    Algunos requisitos para esto son, naturalmente Visual Studio Code con la extension PlatformIO. Tambien se va a hacer uso de la extension Cortex-Debug.
-
-    Git y OpenOCD son otros dos requisitos para pasos posteriores.
+    Es requisito para esta guia tener instalado Visual Studio Code con la extension PlatformIO y Cortex-Debug. Git es necesario para que PlatformIO funciones y pueda descargar paquetes.
 
 En el Home de PlatformIO, vamos a buscar la opcion de Platforms, donde vamos a ver toda una lista de plataformas instaladas para poder programar. La Raspberry Pi Pico con el SDK para programarla en baremetal no es una opcion que venga por defecto por lo que debemos agregarla. Para eso, buscamos la opcion de Advanced Installation. En el nuevo menu que va a aparecer, pegamos el siguiente link y procedemos a instalarlo:
 
@@ -139,15 +137,18 @@ El `launch.json` que vamos a modificar agregamos una configuracion adicional en 
                 "servertype": "openocd",
                 "configFiles": [
                     "interface/cmsis-dap.cfg",
-                    "target/rp2040-core0.cfg"
+                    "target/rp2040.cfg"
+                ],
+                "openOCDPreConfigLaunchCommands": [
+                    "set USE_CORE 0"
                 ],
                 "openOCDLaunchCommands": [
-                    "transport select swd",
-                    "adapter speed 4000"
+                    "adapter speed 4000",
                 ],
                 "searchDir": [],
                 "runToEntryPoint": "main",
-                "showDevDebugOutput": "none"
+                "showDevDebugOutput": "none",
+                "svdFile": "${env:PICO_SDK_PATH}/src/rp2040/hardware_regs/rp2040.svd"
             },
             ...
         ]
