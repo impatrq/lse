@@ -28,3 +28,15 @@ Este microcontrolador es posible de programar en varios lenguajes, entre ellos `
 
     setup/01_vscode_extension
     setup/02_new_project
+
+.. toctree:: 
+  :maxdepth: 2
+  :hidden:
+
+  c-c++/cmakelists
+  c-c++/cmsis
+  c-c++/platformio
+  c-c++/freertos-v1
+  c-c++/freertos
+  c-c++/vscode
+  c-c++/index
