@@ -23,15 +23,16 @@ La placa de desarrollo con la que trabajaremos tiene ademas 2 MB de flash para n
 Este microcontrolador es posible de programar en varios lenguajes, entre ellos ``C/C++``, ``Micropython`` y, por su puesto, ``Assembler``.
 
 .. toctree:: 
-    :maxdepth: 2
-    :caption: Setup
+  :maxdepth: 2
+  :caption: Setup
 
-    setup/01_vscode_extension
-    setup/02_new_project
+  setup/01_vscode_extension
+  setup/02_new_project
 
 .. toctree:: 
   :maxdepth: 2
   :hidden:
+  :caption: Old files
 
   c-c++/cmakelists
   c-c++/platformio
