@@ -34,9 +34,9 @@ Este microcontrolador es posible de programar en varios lenguajes, entre ellos `
   :hidden:
 
   c-c++/cmakelists
-  c-c++/cmsis
   c-c++/platformio
-  c-c++/freertos-v1
   c-c++/freertos
+  c-c++/freertos-v1
+  c-c++/freertos-smp
   c-c++/vscode
   c-c++/index
