@@ -22,14 +22,9 @@ La placa de desarrollo con la que trabajaremos tiene ademas 2 MB de flash para n
 
 Este microcontrolador es posible de programar en varios lenguajes, entre ellos ``C/C++``, ``Micropython`` y, por su puesto, ``Assembler``.
 
-En esta documentacion van a encontrarse con lo siguinte:
+.. toctree:: 
+    :maxdepth: 2
+    :caption: Setup
 
-- `Programacion en lenguaje C/C++`_
-    - `Visual Studio Code`_
-    - `PlatformIO`_
-    - `Wokwi`_
-
-.. _Programacion en lenguaje C/C++: c-c++/index.html
-.. _Visual Studio Code: c-c++/vscode.html
-.. _PlatformIO: c-c++/platformio.html
-.. _Wokwi: c-c++/wokwi.html
+    setup/01_vscode_extension
+    setup/02_new_project
