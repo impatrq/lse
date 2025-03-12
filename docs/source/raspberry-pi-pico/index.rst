@@ -25,6 +25,7 @@ Este microcontrolador es posible de programar en varios lenguajes, entre ellos `
 .. toctree:: 
   :maxdepth: 2
   :caption: Setup
+  :hidden:
 
   setup/01_vscode_extension
   setup/02_new_project
