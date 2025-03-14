@@ -21,8 +21,9 @@ Nuestros microcontroladores
    :height: 100
 .. _Raspberry Pi Pico: ./raspberry-pi-pico/index.html
 
-.. toctree:: 
-   :maxdepth: 3
+.. toctree::
+   :maxdepth: 2
    :caption: Raspberry Pi Pico
-
+   :hidden:
+   
    raspberry-pi-pico/index
