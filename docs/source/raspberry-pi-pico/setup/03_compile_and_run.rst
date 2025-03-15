@@ -23,3 +23,5 @@ Para poder grabar o flashear el proyecto, tenemos que tener acceso a la flash de
   :align: center
 
 Una vez que hacemos esto, la Raspberry Pi Pico va a aparecer como un dispositivo de almacenamiento en la computadora. Si esto sucede, podemos proceder a flashear la aplicación en la memoria desde el menú de la extensión en la barra de la izquierda bajo el comando con la opción *Run Project (USB)* o en la barra inferior del lado derecho en la opción con el nombre *Run*.
+
+Si no hay errores en la terminal, el programa va a estar corriendo en el microcontrolador con normalidad.
