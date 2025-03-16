@@ -30,3 +30,4 @@ Este microcontrolador es posible de programar en varios lenguajes, entre ellos `
   setup/01_vscode_extension
   setup/02_new_project
   setup/03_compile_and_run
+  setup/04_serial_monitor
